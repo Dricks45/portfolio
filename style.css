@@ -317,7 +317,7 @@ h1 {
   width: 2rem;
   height: 2rem;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--second-text-color);
   display: inline-flex;
   justify-content: center;
@@ -450,8 +450,9 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 13px;
   width: 5.5rem;
-  height: 4.5rem;
+  height: 5.5rem;
   border: var(--border);
   border-radius: 0.3rem;
   font-weight: 600;
