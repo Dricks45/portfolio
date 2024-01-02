@@ -18,6 +18,7 @@
   --border: 0.125rem solid #a65b5b;
   --border-img: 0.2rem solid #a65b5b;
   --box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.7);
+  --box-neon: 0 0 0.6rem #ff4f4f;
   /*---font-family: 'Comic Neue', cursive; _ font-family: 'Tangerine', cursive; _ font-family: 'Caveat', cursive;---*/
 }
 
@@ -31,7 +32,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--text-color);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .load {
@@ -42,20 +43,46 @@ body {
   color: var(--main-color);
   font-size: 4rem;
   font-family: "Caveat", cursive;
-  text-shadow: var(--box-shadow);
+  text-shadow: var(--box-neon);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0a293f;
 }
 
 [class*="anim"] {
-  animation: loading 2s 3 ease;
+  animation: loading 2s 1 ease;
 }
 
 @keyframes loading {
-  0%,
-  100% {
-    transform: scale3d(1, 1, 1);
+  0% {
+    color: rgba(46, 46, 46, 0.61);
+    text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
   }
-  50% {
-    transform: scale3d(0, 0, 1);
+  10% {
+    color: #eedde0;
+    text-shadow: 0 0 30px #ec637b, 0 0 10px rgba(230, 161, 173, 0.41),
+      0 0 100px #e6a1ad, 0 0 500px #f36780, 5px 9px 5px rgba(0, 0, 0, 0.5);
+  }
+  12% {
+    color: rgba(46, 46, 46, 0.61);
+    text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+  }
+  15% {
+    color: #eedde0;
+    text-shadow: 0 0 30px #ec637b, 0 0 10px rgba(230, 161, 173, 0.41),
+      0 0 100px #e6a1ad, 0 0 500px #f36780, 5px 9px 5px rgba(0, 0, 0, 0.5);
+  }
+  25% {
+    color: rgba(46, 46, 46, 0.61);
+    text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+  }
+  30% {
+    color: #eedde0;
+    text-shadow: 0 0 30px #ec637b, 0 0 10px rgba(230, 161, 173, 0.41),
+      0 0 100px #e6a1ad, 0 0 500px #f36780, 5px 9px 5px rgba(0, 0, 0, 0.5);
+  }
+  45% {
+    color: rgba(46, 46, 46, 0.61);
+    text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -333,11 +360,6 @@ h1 {
   left: 1.5rem;
 }
 
-.line {
-  text-decoration: line-through;
-  text-decoration-color: var(--second-text-color);
-}
-
 .portfolio_box .img_box {
   display: flex;
   margin: auto;
@@ -421,6 +443,10 @@ h1 {
 
 .portfolio_box .info_box p:nth-of-type(1) {
   font-weight: 600;
+}
+
+.portfolio_box .info_box .info_title .line {
+  display: none;
 }
 
 .skills_box {
