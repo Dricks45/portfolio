@@ -446,10 +446,6 @@
     font-weight: 600;
   }
 
-  .portfolio_box .info_box .info_title .line {
-    display: none;
-  }
-
   .skills_box {
     display: flex;
     flex-wrap: wrap;
